@@ -51,7 +51,8 @@ public class EntryRepositoryEntryDetailsService implements JacketEntryService {
 			jacketEntry = new JacketEntry(entry.getUrl());
 
 		} catch (Exception ex) {
-            log.debug(ex);
+                        //throw an exception
+			log.debug(ex);
 			throw new JacketException("Unable to find entry", ex);
 		}
  		return jacketEntry;
